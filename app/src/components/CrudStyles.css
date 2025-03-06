@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main Container */
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  color: #2a5298;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Input Box & Add Button */
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #2a5298;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+}
+
+button {
+  background: #2a5298;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1e3c72;
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+  height: 45px; /* FIXED HEIGHT */
+}
+
+/* Align text and buttons properly */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Text Section */
+.item-text {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 5px;
+}
+
+/* Action Buttons */
+/* Update Button & Edit Input */
+.update-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 120px; /* Fixed width to prevent movement */
+}
+
+.edit-input {
+  width: 80px; /* Fixed input width */
+  padding: 5px;
+  font-size: 14px;
+}
+
+.update-button {
+  flex-shrink: 0; /* Prevents shrinking when input appears */
+  background: #ffc107;
+  color: black;
+  padding: 6px 10px;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.update-button:hover {
+  background: #e0a800;
+}
+
+
+.delete-button {
+  background: #dc3545;
+  color: white;
+}
+
+.save-button {
+  background: #28a745;
+  color: white;
+}
+
+.cancel-button {
+  background: #6c757d;
+  color: white;
+}
+
+.update-button,
+.delete-button,
+.save-button,
+.cancel-button {
+  padding: 6px 10px;
+  font-size: 14px;
+  height: 32px; /* FIXED HEIGHT */
+  display: flex;
+  align-items: center;
+}
+
+.update-button:hover {
+  background: #e0a800;
+}
+
+.delete-button:hover {
+  background: #c82333;
+}
+
+.save-button:hover {
+  background: #218838;
+}
+
+.cancel-button:hover {
+  background: #5a6268;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+}
