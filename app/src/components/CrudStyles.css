@@ -1,190 +1,200 @@
-/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-/* Main Container */
-.container {
-  background: #ffffff;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  width: 420px;
-  text-align: center;
 }
 
-/* Heading */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px;
+  border-radius: 20px;
+  width: 650px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
 h2 {
-  color: #2a5298;
-  font-size: 24px;
-  margin-bottom: 15px;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Input Box & Add Button */
+/* 🚀 Modern Search Bar */
 .input-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
 }
 
 input[type="text"] {
   flex: 1;
-  padding: 10px;
-  border: 2px solid #2a5298;
-  border-radius: 8px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s ease;
   outline: none;
-  transition: 0.3s;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 input[type="text"]:focus {
-  border-color: #1e3c72;
-  box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
-button {
-  background: #2a5298;
-  color: white;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #1e3c72;
-}
-
-/* List Styling */
+/* 🚀 Beautiful Task List */
 ul {
   list-style: none;
   padding: 0;
-  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 li {
-  background: #f8f9fa;
-  padding: 12px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 8px;
-  height: 45px; /* FIXED HEIGHT */
+  background: rgba(255, 255, 255, 0.25);
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Align text and buttons properly */
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 .list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
-/* Text Section */
 .item-text {
   flex: 1;
   font-size: 16px;
+  color: white;
   font-weight: 500;
-  color: #333;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-/* Button Group */
+/* 🚀 Buttons with Glow Effect */
 .button-group {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 
-/* Action Buttons */
-/* Update Button & Edit Input */
-.update-container {
+button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  color: white;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: 5px;
-  width: 120px; /* Fixed width to prevent movement */
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.edit-input {
-  width: 80px; /* Fixed input width */
-  padding: 5px;
-  font-size: 14px;
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .update-button {
-  flex-shrink: 0; /* Prevents shrinking when input appears */
-  background: #ffc107;
-  color: black;
-  padding: 6px 10px;
-  font-size: 14px;
-  height: 32px;
-  display: flex;
-  align-items: center;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
-
-.update-button:hover {
-  background: #e0a800;
-}
-
 
 .delete-button {
-  background: #dc3545;
-  color: white;
+  background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
 }
 
 .save-button {
-  background: #28a745;
-  color: white;
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
 }
 
 .cancel-button {
-  background: #6c757d;
-  color: white;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
 }
 
-.update-button,
-.delete-button,
-.save-button,
-.cancel-button {
-  padding: 6px 10px;
-  font-size: 14px;
-  height: 32px; /* FIXED HEIGHT */
-  display: flex;
-  align-items: center;
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-.update-button:hover {
-  background: #e0a800;
+button:active {
+  transform: scale(1);
 }
 
-.delete-button:hover {
-  background: #c82333;
-}
-
-.save-button:hover {
-  background: #218838;
-}
-
-.cancel-button:hover {
-  background: #5a6268;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
+/* 🌟 Fully Responsive Design */
+@media (max-width: 640px) {
   .container {
-    width: 90%;
+    padding: 30px;
+  }
+
+  .list-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-group {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px 15px;
   }
 }
